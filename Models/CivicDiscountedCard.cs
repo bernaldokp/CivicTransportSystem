@@ -4,7 +4,7 @@ namespace CivicTransportSystem.Models
 {
     public class CivicDiscountedCard : Card
     {
-        public string DiscountType { get; set; } // "Senior Citizen" or "PWD"
+        public required string DiscountType { get; set; } // "Senior Citizen" or "PWD"
         public override decimal ExitFee => 10;
         public override DateTime ValidUntil => LastUsedDate.AddYears(3);
         public int DailyTrips { get; set; } = 0;
